@@ -93,6 +93,12 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted: function(){
+      this.$http.get("/posts").then(res => {
+        debugger
+          console.log(res);
+      });
   }
 }
 </script>
